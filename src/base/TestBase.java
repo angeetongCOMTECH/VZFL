@@ -28,6 +28,8 @@ public class TestBase {
 	//***                                  ***//
 	//****************************************//
 	
+	//If using for windows, please change paths to windows paths.
+	
         @SuppressWarnings("rawtypes")
         public static AppiumDriver driver;
 	    public static WebDriver webdriver;
