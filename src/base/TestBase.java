@@ -33,8 +33,13 @@ public class TestBase {
         @SuppressWarnings("rawtypes")
         public static AppiumDriver driver;
 	    public static WebDriver webdriver;
+	    
+	    //For Mac -comment out if using for windows
 	    public static String folderpath = "/Users/atong/Documents/EclipseProjects/FamilyLocator/screencaptures";
-		public static String runonrealdevice = "";
+		//For Windows -comment out if using for mac
+	    //public static String folderpath = "C:\\EclipseProjects\\FamilyLocator\\screencaptures";
+	    
+	    public static String runonrealdevice = "";
 		public String methodname = "";
 
 
@@ -52,12 +57,18 @@ public class TestBase {
 			{
 				if(ReadProperties.globalProp.getProperty("webbrowser").contains("firefox"))
 				{
+				    //For Mac -comment out if using for windows
 					System.setProperty("webdriver.gecko.driver","/Users/atong/Documents/geckodriver/geckodriver");
+					//For Windows -comment out if using for mac
+					//System.setProperty("webdriver.gecko.driver","C:\\geckodriver\\geckodriver");
 					webdriver = new FirefoxDriver();
 				}
 				else if (ReadProperties.globalProp.getProperty("webbrowser").contains("chrome"))
 				{
+				    //For Mac -comment out if using for windows
 					System.setProperty("webdriver.chrome.driver", "/Users/atong/Documents/chromedriver/chromedriver");
+					//For Windows -comment out if using for mac
+					//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver");
 					webdriver = new ChromeDriver();
 				}
 				else 

@@ -20,7 +20,10 @@ public class ExcelMethods {
 	//Works with TestData Excel spreadsheet.
 	
 	final static Logger log = Logger.getLogger(ExcelMethods.class);
+    //For Mac -comment out if using for windows
     private static final String FILE_NAME = "/Users/atong/Documents/EclipseProjects/FamilyLocator/src/testdata/TestData.xlsx";
+	//For Windows -comment out if using for mac
+    //private static final String FILE_NAME = "C:\\EclipseProjects\\FamilyLocator\\src\\testdata\\TestData.xlsx";
     
 	// Read and Provide value to Data Provider
     // Make sure the name of the test is on the tab of the excel sheet and make sure there are no leading and trailing spaces in the name or get nullpointer
