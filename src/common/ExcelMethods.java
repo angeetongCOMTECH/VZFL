@@ -17,6 +17,7 @@ public class ExcelMethods {
 	//*** This piece of code got help from Virtumedix project ***//
 	//***********************************************************//
 	
+	//Works with TestData Excel spreadsheet.
 	
 	final static Logger log = Logger.getLogger(ExcelMethods.class);
     private static final String FILE_NAME = "/Users/atong/Documents/EclipseProjects/FamilyLocator/src/testdata/TestData.xlsx";
