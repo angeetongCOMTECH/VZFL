@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Verizon Family Locator Web Regression Test Suite" duration-ms="195665" started-at="2017-12-31T19:27:08Z" finished-at="2017-12-31T19:30:24Z">
+    <groups>
+    </groups>
+    <test name="Add Tests" duration-ms="151909" started-at="2017-12-31T19:27:08Z" finished-at="2017-12-31T19:29:40Z">
+      <class name="webTests.AddContacts">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:webTests.AddContacts@67c33749]" name="Setup" is-config="true" duration-ms="2691" started-at="2017-12-31T11:27:42Z" finished-at="2017-12-31T11:27:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="addContactsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:webTests.AddContacts@67c33749]" name="addContactsTest" duration-ms="21576" started-at="2017-12-31T11:27:45Z" data-provider="getData" finished-at="2017-12-31T11:28:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[comiccon]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[A1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[nimtester00@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addContactsTest -->
+        <test-method status="PASS" signature="OnFailure(org.testng.ITestResult)[pri:0, instance:webTests.AddContacts@67c33749]" name="OnFailure" is-config="true" duration-ms="0" started-at="2017-12-31T11:28:06Z" finished-at="2017-12-31T11:28:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addContactsTest status=SUCCESS method=AddContacts.addContactsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:webTests.AddContacts@67c33749] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnFailure -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webTests.AddContacts@67c33749]" name="tearDown" is-config="true" duration-ms="85" started-at="2017-12-31T11:28:06Z" finished-at="2017-12-31T11:28:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- webTests.AddContacts -->
+      <class name="webTests.AddLocationBasedAlert">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:webTests.AddLocationBasedAlert@fba92d3]" name="Setup" is-config="true" duration-ms="2603" started-at="2017-12-31T11:28:07Z" finished-at="2017-12-31T11:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="addLBAlertWithPlaceTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:webTests.AddLocationBasedAlert@fba92d3]" name="addLBAlertWithPlaceTest" duration-ms="52566" started-at="2017-12-31T11:28:09Z" data-provider="getData" finished-at="2017-12-31T11:29:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[comiccon]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[14201 Jeffrey]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[14201 Jeffrey Rd
+Irvine, CA 92620]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[14201 Jeffrey Rd
+Irvine, CA]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[14201 Jeffrey Rd, Irvine, CA 92620, USA]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Albertsons]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[A1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[nimtester00@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLBAlertWithPlaceTest -->
+        <test-method status="PASS" signature="OnFailure(org.testng.ITestResult)[pri:0, instance:webTests.AddLocationBasedAlert@fba92d3]" name="OnFailure" is-config="true" duration-ms="0" started-at="2017-12-31T11:29:02Z" finished-at="2017-12-31T11:29:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLBAlertWithPlaceTest status=SUCCESS method=AddLocationBasedAlert.addLBAlertWithPlaceTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:webTests.AddLocationBasedAlert@fba92d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnFailure -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webTests.AddLocationBasedAlert@fba92d3]" name="tearDown" is-config="true" duration-ms="95" started-at="2017-12-31T11:29:02Z" finished-at="2017-12-31T11:29:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Setup()[pri:0, instance:webTests.AddLocationBasedAlert@fba92d3]" name="Setup" is-config="true" duration-ms="2685" started-at="2017-12-31T11:29:02Z" finished-at="2017-12-31T11:29:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="addLBAlertExistingPlaceTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:webTests.AddLocationBasedAlert@fba92d3]" name="addLBAlertExistingPlaceTest" duration-ms="35675" started-at="2017-12-31T11:29:05Z" data-provider="getData" depends-on-methods="webTests.AddLocationBasedAlert.addLBAlertWithPlaceTest" finished-at="2017-12-31T11:29:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[comiccon]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[14201 Jeffrey Rd, Irvine, CA 92620, USA]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Albertsons]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[A1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[nimtester00@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLBAlertExistingPlaceTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webTests.AddLocationBasedAlert@fba92d3]" name="tearDown" is-config="true" duration-ms="89" started-at="2017-12-31T11:29:40Z" finished-at="2017-12-31T11:29:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="OnFailure(org.testng.ITestResult)[pri:0, instance:webTests.AddLocationBasedAlert@fba92d3]" name="OnFailure" is-config="true" duration-ms="0" started-at="2017-12-31T11:29:40Z" finished-at="2017-12-31T11:29:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLBAlertExistingPlaceTest status=SUCCESS method=AddLocationBasedAlert.addLBAlertExistingPlaceTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:webTests.AddLocationBasedAlert@fba92d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnFailure -->
+      </class> <!-- webTests.AddLocationBasedAlert -->
+      <class name="webTests.AddaPlace">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:webTests.AddaPlace@78123e82]" name="Setup" is-config="true" duration-ms="3526" started-at="2017-12-31T11:27:09Z" finished-at="2017-12-31T11:27:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="addPlaceTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:webTests.AddaPlace@78123e82]" name="addPlaceTest" duration-ms="29538" started-at="2017-12-31T11:27:12Z" data-provider="getData" finished-at="2017-12-31T11:27:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[comiccon]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[14201 Jeffrey]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[14201 Jeffrey Rd
+Irvine, CA 92620]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[14201 Jeffrey Rd
+Irvine, CA]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[14201 Jeffrey Rd, Irvine, CA 92620, USA]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Albertsons]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPlaceTest -->
+        <test-method status="PASS" signature="OnFailure(org.testng.ITestResult)[pri:0, instance:webTests.AddaPlace@78123e82]" name="OnFailure" is-config="true" duration-ms="0" started-at="2017-12-31T11:27:42Z" finished-at="2017-12-31T11:27:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addPlaceTest status=SUCCESS method=AddaPlace.addPlaceTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:webTests.AddaPlace@78123e82] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnFailure -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webTests.AddaPlace@78123e82]" name="tearDown" is-config="true" duration-ms="93" started-at="2017-12-31T11:27:42Z" finished-at="2017-12-31T11:27:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- webTests.AddaPlace -->
+    </test> <!-- Add Tests -->
+    <test name="Remove Tests" duration-ms="43575" started-at="2017-12-31T19:29:40Z" finished-at="2017-12-31T19:30:24Z">
+      <class name="webTests.DeleteLocationBasedAlert">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:webTests.DeleteLocationBasedAlert@35aea049]" name="Setup" is-config="true" duration-ms="2682" started-at="2017-12-31T11:29:41Z" finished-at="2017-12-31T11:29:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="removeLBAlertTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:webTests.DeleteLocationBasedAlert@35aea049]" name="removeLBAlertTest" duration-ms="17807" started-at="2017-12-31T11:29:43Z" data-provider="getData" finished-at="2017-12-31T11:30:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[comiccon]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Albertsons]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeLBAlertTest -->
+        <test-method status="PASS" signature="OnFailure(org.testng.ITestResult)[pri:0, instance:webTests.DeleteLocationBasedAlert@35aea049]" name="OnFailure" is-config="true" duration-ms="0" started-at="2017-12-31T11:30:01Z" finished-at="2017-12-31T11:30:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeLBAlertTest status=SUCCESS method=DeleteLocationBasedAlert.removeLBAlertTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:webTests.DeleteLocationBasedAlert@35aea049] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnFailure -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webTests.DeleteLocationBasedAlert@35aea049]" name="tearDown" is-config="true" duration-ms="86" started-at="2017-12-31T11:30:01Z" finished-at="2017-12-31T11:30:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- webTests.DeleteLocationBasedAlert -->
+      <class name="webTests.DeleteContacts">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:webTests.DeleteContacts@7205765b]" name="Setup" is-config="true" duration-ms="5565" started-at="2017-12-31T11:30:01Z" finished-at="2017-12-31T11:30:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="removeContactsTest(java.lang.String, java.lang.String)[pri:0, instance:webTests.DeleteContacts@7205765b]" name="removeContactsTest" duration-ms="17274" started-at="2017-12-31T11:30:07Z" data-provider="getData" finished-at="2017-12-31T11:30:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9493300677]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[comiccon]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeContactsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webTests.DeleteContacts@7205765b]" name="tearDown" is-config="true" duration-ms="88" started-at="2017-12-31T11:30:24Z" finished-at="2017-12-31T11:30:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="OnFailure(org.testng.ITestResult)[pri:0, instance:webTests.DeleteContacts@7205765b]" name="OnFailure" is-config="true" duration-ms="0" started-at="2017-12-31T11:30:24Z" finished-at="2017-12-31T11:30:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeContactsTest status=SUCCESS method=DeleteContacts.removeContactsTest(java.lang.String, java.lang.String)[pri:0, instance:webTests.DeleteContacts@7205765b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnFailure -->
+      </class> <!-- webTests.DeleteContacts -->
+    </test> <!-- Remove Tests -->
+  </suite> <!-- Verizon Family Locator Web Regression Test Suite -->
+</testng-results>

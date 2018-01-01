@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/client-combined-3.6.0-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/client-combined-3.6.0.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/selenium-server-standalone-3.6.0.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/byte-buddy-1.7.5.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/guava-23.0.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/selenium-java-3.6.0/selenium-java-3.6.0/libs/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-test-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-tests.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-1.2-api-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-1.2-api-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-1.2-api-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-api-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-api-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-api-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-core-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-core-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-core-2.9.1-tests.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-core-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-flume-ng-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-flume-ng-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-flume-ng-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-iostreams-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-iostreams-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-iostreams-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jcl-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jcl-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jcl-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jmx-gui-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jmx-gui-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jmx-gui-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jul-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jul-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-jul-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-liquibase-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-liquibase-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-liquibase-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-nosql-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-nosql-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-nosql-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-taglib-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-taglib-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-taglib-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-web-2.9.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-web-2.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/apache-log4j-2.9.1-bin/log4j-web-2.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/Appium Java Client Jars/java-client-5.0.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/Appium Java Client Jars/java-client-5.0.4-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/Appium Java Client Jars/java-client-5.0.4.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/Users/atong/Documents/poi extra jar to make it run ok/commons-collections4-4.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
