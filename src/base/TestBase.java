@@ -58,17 +58,17 @@ public class TestBase {
 				if(ReadProperties.globalProp.getProperty("webbrowser").contains("firefox"))
 				{
 				    //For Mac -comment out if using for windows
-					System.setProperty("webdriver.gecko.driver","/Users/atong/Documents/geckodriver/geckodriver");
+					System.setProperty("webdriver.gecko.driver","/Users/atong/Documents/EclipseProjects/FamilyLocator/lib/geckodriver/geckodriver");
 					//For Windows -comment out if using for mac
-					//System.setProperty("webdriver.gecko.driver","C:\\geckodriver\\geckodriver");
+					//System.setProperty("webdriver.gecko.driver","C:\\EclipseProjects\\FamilyLocator\\lib\\geckodriver\\geckodriver");
 					webdriver = new FirefoxDriver();
 				}
 				else if (ReadProperties.globalProp.getProperty("webbrowser").contains("chrome"))
 				{
 				    //For Mac -comment out if using for windows
-					System.setProperty("webdriver.chrome.driver", "/Users/atong/Documents/chromedriver/chromedriver");
+					System.setProperty("webdriver.chrome.driver", "/Users/atong/Documents/EclipseProjects/FamilyLocator/lib/chromedriver/chromedriver");
 					//For Windows -comment out if using for mac
-					//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver");
+					//System.setProperty("webdriver.chrome.driver", "C:\\EclipseProjects\\FamilyLocator\\lib\\chromedriver\\chromedriver");
 					webdriver = new ChromeDriver();
 				}
 				else 

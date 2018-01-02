@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Verizon Family Locator Web Regression Test Suite]">
+  <test name="Login Tests(failed)">
     <classes>
-      <class name="webTests.AddaPlace">
+      <class name="webTests.LoginWeb">
         <methods>
+          <include name="loginWebVZFL"/>
           <include name="OnFailure"/>
-          <include name="addPlaceTest" invocation-numbers="0"/>
           <include name="Setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- webTests.AddaPlace -->
+      </class> <!-- webTests.LoginWeb -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Login Tests(failed) -->
+</suite> <!-- Failed suite [Verizon Family Locator Web Regression Test Suite] -->
