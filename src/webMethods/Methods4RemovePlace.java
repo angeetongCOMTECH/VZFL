@@ -28,8 +28,12 @@ public class Methods4RemovePlace {
 			{
 			    log.info("Methods4RemovePlace starting");		
 				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webplacesicon.css", 1000);
-				//WebLocatorMethods.clickByCssSelector(webdriver, "webplacesclicktofreshenpage.css"); //Don't add or won't get the entire list of places and get stale elements
 				
+				Thread.sleep(2000);
+				Boolean emptyplacesexists = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyplaces.css", 1000);
+				
+				if (emptyplacesexists == false)
+				{
 				
 				//To avoid org.openqa.selenium.StaleElementReferenceException error by storing locators to the elements instead of references
 				List <WebElement> placeelements = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webplaceslistarray.css", 4000);
@@ -125,6 +129,12 @@ public class Methods4RemovePlace {
 									    WebLocatorMethods.clickByCssSelector(webdriver, "webdeleteplaceremovebtn.css", 120);
 									    log.info("Clicked delete button.");
 									    
+								Thread.sleep(2000);
+								Boolean emptyplacesexists2 = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyplaces.css", 1000);
+										
+								if (emptyplacesexists2 == false)
+								{
+									    
 									    List <WebElement> afterdeleteplacearray = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webplaceslistarray.css", 4000);
 									    int afterdeleteplacesize = afterdeleteplacearray.size();
 									    
@@ -145,6 +155,13 @@ public class Methods4RemovePlace {
 									    javascript.executeScript("window.scrollBy(0,-800)", "");
 								        
 									    break;
+								}
+								else 
+								{
+								    log.info("Place has been deleted.");
+								    break;
+								}
+									    
 							    	    }
 									    
 							    }
@@ -156,6 +173,11 @@ public class Methods4RemovePlace {
 						 }
 							    
 				        
+				}
+				}
+				else
+				{
+					log.info("There is an empty places list so there are no places to delete.");
 				}
 
 			}

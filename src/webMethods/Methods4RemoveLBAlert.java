@@ -34,14 +34,20 @@ public class Methods4RemoveLBAlert {
 			log.info("Methods4RemoveLBAlert starting");
 			
 			WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webalertsicon.class", 1000);
-			WebLocatorMethods.clickByCssSelector(webdriver, "webalertfirstalerticontorefreshpage.css", 30);
+
 		
 		/***
 			WebLocatorMethods.clickByCssSelector(webdriver, "webalertaddedclickonbellicontoscrolluptoreachnewlyaddedalert.css");
 			WebLocatorMethods.javscriptexecutorScrollIntoViewContainingTextByXpath(webdriver, placename, "webalertaddedinlist.xpath" );
             WebLocatorMethods.javascriptExecutorScrollIntoViewByClass(webdriver, "webalertdeleteicon.class");
         ***/
+            Thread.sleep(2000);
+			Boolean emptyalertsexists = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyalerts.css", 1000);
 			
+			if (emptyalertsexists == false)
+			{
+			
+			WebLocatorMethods.clickByCssSelector(webdriver, "webalertfirstalerticontorefreshpage.css", 30);
 			
 			//To avoid org.openqa.selenium.StaleElementReferenceException error by storing locators to the elements instead of references
 			List <WebElement> placeelements = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webalertsinlistarray.css", 2000);
@@ -97,11 +103,7 @@ public class Methods4RemoveLBAlert {
 										  ScreenshotURL.screenshotURL(webdriver, foldername, errorname, error);
 										  softAssert.fail();
 									  }
-									
-									//needed to remove below commented lines or else get stale reference
-									//have to click somewhere on page to be able to find rest of other elements 
-									//WebLocatorMethods.clickByCssSelector(webdriver, "webdeletealertclickonfirstalerticontofreshenpage.css");
-									
+							
 									List <WebElement> deleteplaceelements = WebLocatorMethods.arrayofelementsbyClass(webdriver, "webdeletealertdescriptionarray.class", 2000); 
 									int deletealertslistsize = deleteplaceelements.size();
 									log.info("There are "+deletealertslistsize+" alerts that can be checked off to delete.");
@@ -142,9 +144,14 @@ public class Methods4RemoveLBAlert {
 												  softAssert.fail();
 											}
 				
+									    Thread.sleep(2000);	
+										WebLocatorMethods.clickByCssSelector(webdriver, "webdeletealertremovebtn.css", 30);
+										Thread.sleep(4000);	
+										
+										Boolean emptyalertsexists2 = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyalerts.css", 1000);
 											
-											WebLocatorMethods.clickByCssSelector(webdriver, "webdeletealertremovebtn.css", 30);
-											
+										if (emptyalertsexists2 == false)
+										{
 											int afterdeletedalertlistsize = WebLocatorMethods.sizeByCSS(webdriver, "webalertsinlistarray.css", 30);
 											
 											for (int k=0; k<afterdeletedalertlistsize; k++) 
@@ -164,6 +171,12 @@ public class Methods4RemoveLBAlert {
 									        
 									        break;
 										}
+										else
+										{
+											log.info("Alert was deleted.");	
+											break;
+										}
+										}
 									}			
 								
 									break;		
@@ -175,7 +188,11 @@ public class Methods4RemoveLBAlert {
 					
 
 			}
-
+			}
+			else
+			{
+				log.info("There is an empty alerts list so there are no alerts to delete.");
+			}
 			
 		}
 		catch(Exception e)

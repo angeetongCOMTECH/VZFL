@@ -47,7 +47,6 @@ public class Methods4AddPlace {
 			
 			
 			log.info("Checking autosuggestion on Add Place page.");
-			
 			try
 			{
 				WebLocatorMethods.clickByCssSelector(webdriver, "webaddplacepgsearchfield.css", 30);

@@ -194,7 +194,9 @@ public class Methods4AddLocationBasedAlerts {
 				
 				int isselectedcheckbox3 = WebLocatorMethods.sizeByCSS(webdriver, "webalertselectfamilymember3checkboxchecked.css", 40);
 				
+
 				log.info("Check next button exists.");
+				Thread.sleep(2000);
 				
 				if (isselectedcheckbox1 == 1 && isselectedcheckbox2 == 1 && isselectedcheckbox3 == 1)
 				{
@@ -219,7 +221,8 @@ public class Methods4AddLocationBasedAlerts {
 					log.error("Failed Assertion. Check all checkboxes, but no next button.");
 				}
 				
-				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 30);
+
+				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 2000);
 				
 				log.info("Check review add web alert page.");
 				
@@ -584,7 +587,9 @@ public class Methods4AddLocationBasedAlerts {
 							
 			int isselectedcheckbox3 = WebLocatorMethods.sizeByCSS(webdriver, "webalertselectfamilymember3checkboxchecked.css", 40);
 			
+			
 			log.info("Check next button exists.");
+			Thread.sleep(2000);
 			
 			if (isselectedcheckbox1 == 1 && isselectedcheckbox2 == 1 && isselectedcheckbox3 == 1)
 			{
@@ -609,7 +614,7 @@ public class Methods4AddLocationBasedAlerts {
 				log.error("Failed Assertion. Check all checkboxes, but no next button.");
 			}
 			
-			WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 30);
+			WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 2000);
 			
 			log.info("Check review add web alert page.");
 			
