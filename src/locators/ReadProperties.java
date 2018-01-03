@@ -23,8 +23,8 @@ public class ReadProperties {
 		
 		try {
 			webLocatorProp = new Properties();
-			//FileInputStream in = new FileInputStream("C:\\EclipseProjects\\FamilyLocator\\src\\locators\\locators.properties");
-			FileInputStream in = new FileInputStream("/Users/atong/Documents/EclipseProjects/FamilyLocator/src/locators/locators.properties");
+			FileInputStream in = new FileInputStream("C:\\EclipseProjects\\FamilyLocator\\src\\locators\\locators.properties");
+			//FileInputStream in = new FileInputStream("/Users/atong/Documents/EclipseProjects/FamilyLocator/src/locators/locators.properties");
 			webLocatorProp.load(in);
 			in.close();
 		}
@@ -43,8 +43,8 @@ public class ReadProperties {
 		
 		try {
         globalProp=new Properties();
-		//FileInputStream in=new FileInputStream("C:\\EclipseProjects\\FamilyLocator\\src\\base\\global.properties");
-        FileInputStream in=new FileInputStream("/Users/atong/Documents/EclipseProjects/FamilyLocator/src/base/global.properties");
+		FileInputStream in=new FileInputStream("C:\\EclipseProjects\\FamilyLocator\\src\\base\\global.properties");
+        //FileInputStream in=new FileInputStream("/Users/atong/Documents/EclipseProjects/FamilyLocator/src/base/global.properties");
 		globalProp.load(in);
 		in.close();
 		}

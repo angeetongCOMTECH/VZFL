@@ -35,9 +35,9 @@ public class TestBase {
 	    public static WebDriver webdriver;
 	    
 	    //For Mac -comment out if using for windows
-	    public static String folderpath = "/Users/atong/Documents/EclipseProjects/FamilyLocator/screencaptures";
+	    //public static String folderpath = "/Users/atong/Documents/EclipseProjects/FamilyLocator/screencaptures";
 		//For Windows -comment out if using for mac
-	    //public static String folderpath = "C:\\EclipseProjects\\FamilyLocator\\screencaptures";
+	    public static String folderpath = "C:\\EclipseProjects\\FamilyLocator\\screencaptures";
 	    
 	    public static String runonrealdevice = "";
 		public String methodname = "";
@@ -46,7 +46,7 @@ public class TestBase {
         @SuppressWarnings({ "rawtypes", "deprecation" })
 		@BeforeMethod 
 		//Use before method instead of before class or before test so each method/test will open in new browser; 
-		//This was tested and found beforemethod was the only one that works.
+		//This was tested and found before method was the only one that works.
 		public void Setup() throws IOException{
 	         
         		ReadProperties.retrieveGlobalProperties();
@@ -58,17 +58,17 @@ public class TestBase {
 				if(ReadProperties.globalProp.getProperty("webbrowser").contains("firefox"))
 				{
 				    //For Mac -comment out if using for windows
-					System.setProperty("webdriver.gecko.driver","/Users/atong/Documents/EclipseProjects/FamilyLocator/lib/geckodriver/geckodriver");
+					//System.setProperty("webdriver.gecko.driver","/Users/atong/Documents/EclipseProjects/FamilyLocator/lib/geckodriver/geckodriver");
 					//For Windows -comment out if using for mac
-					//System.setProperty("webdriver.gecko.driver","C:\\EclipseProjects\\FamilyLocator\\lib\\geckodriver\\geckodriver");
+					System.setProperty("webdriver.gecko.driver","C:\\EclipseProjects\\FamilyLocator\\lib\\geckodriver\\geckodriver.exe");
 					webdriver = new FirefoxDriver();
 				}
 				else if (ReadProperties.globalProp.getProperty("webbrowser").contains("chrome"))
 				{
 				    //For Mac -comment out if using for windows
-					System.setProperty("webdriver.chrome.driver", "/Users/atong/Documents/EclipseProjects/FamilyLocator/lib/chromedriver/chromedriver");
+					//System.setProperty("webdriver.chrome.driver", "/Users/atong/Documents/EclipseProjects/FamilyLocator/lib/chromedriver/chromedriver");
 					//For Windows -comment out if using for mac
-					//System.setProperty("webdriver.chrome.driver", "C:\\EclipseProjects\\FamilyLocator\\lib\\chromedriver\\chromedriver");
+					System.setProperty("webdriver.chrome.driver", "C:\\EclipseProjects\\FamilyLocator\\lib\\chromedriver\\chromedriver.exe");
 					webdriver = new ChromeDriver();
 				}
 				else 
