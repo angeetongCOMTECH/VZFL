@@ -20,7 +20,7 @@ public class Methods4RemoveContact {
 	
 	public static void removeContacts (WebDriver webdriver, String foldername, String errorname, String error) throws InterruptedException, IOException
 	{
-		WebLocatorMethods.waitXSecsAndGetVisibleElementByCSS(webdriver, "contactslink.css", 1000);
+		WebLocatorMethods.waitXSecsAndGetVisibleElementByCSS(webdriver, "contactslink.css", 180);
 		WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "contactslink.css", 30);
 		WebLocatorMethods.waitXSecsAndGetVisibleElementByCSS(webdriver, "contactsheader.css", 60);
 		String contactsheadertext = WebLocatorMethods.getTextByCSS(webdriver, "contactsheader.css",30);		
@@ -42,9 +42,9 @@ public class Methods4RemoveContact {
 			softAssert.fail();
 		}
 	
-		Boolean deletecontactsbtnexists = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "contactsdeletebutton.class", 300);	  
+		Boolean deletecontactsbtnexists = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "contactsdeletebutton.class", 180);	  
 			
-	    Boolean nocontactexist = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "nocontactsdefinedtext.class", 300);
+	    Boolean nocontactexist = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "nocontactsdefinedtext.class", 180);
 		if (nocontactexist == true)
 			{
 			//If no contacts exist exit if/else statement.
@@ -85,9 +85,9 @@ public class Methods4RemoveContact {
 		         Assert.assertEquals(numberofcontactsnamestodelete, numberofcontactscheckboxestodelete);
 
 		         log.info("Select all contacts to delete.");
-		         WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "deletecontactsselectalllink.css", 300);
+		         WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "deletecontactsselectalllink.css", 180);
 		         
-		         int numberofcheckedcontactscheckboxestodelete = WebLocatorMethods.sizeByCSS(webdriver, "deletecontactscheckedoffcheckboxesarray.css", 600);
+		         int numberofcheckedcontactscheckboxestodelete = WebLocatorMethods.sizeByCSS(webdriver, "deletecontactscheckedoffcheckboxesarray.css", 180);
 		         Assert.assertEquals(numberofcheckedcontactscheckboxestodelete, numberofcontactscheckboxestodelete);
 		         
 		         
@@ -106,11 +106,11 @@ public class Methods4RemoveContact {
 			  
 			  try
 			  {
-				  String cancelbtntext = WebLocatorMethods.getTextByCSS(webdriver, "deletecontactscancelbtn.css", 300);
+				  String cancelbtntext = WebLocatorMethods.getTextByCSS(webdriver, "deletecontactscancelbtn.css", 180);
 				  Assert.assertEquals(cancelbtntext, "Cancel");
 				  
 
-				  String removebtntext = WebLocatorMethods.getTextByCSS(webdriver, "deletecontactsremovebtn.css", 300);
+				  String removebtntext = WebLocatorMethods.getTextByCSS(webdriver, "deletecontactsremovebtn.css", 180);
 				  Assert.assertEquals(removebtntext, "Remove");
 			  }
 			  catch(AssertionError e)
@@ -122,7 +122,7 @@ public class Methods4RemoveContact {
 				  softAssert.fail();
 			  }
 				  
-			  WebLocatorMethods.clickByCssSelector(webdriver,"deletecontactsremovebtn.css", 300);
+			  WebLocatorMethods.clickByCssSelector(webdriver,"deletecontactsremovebtn.css", 180);
 			  
 			  //Verify deleting all contacts returns back to Contacts page
 			  log.info("Check after deleting contacts return to contacts page by checking contacts header.");
@@ -130,10 +130,10 @@ public class Methods4RemoveContact {
 			  try
 			  {
 
-				  String returntocontactsheader = WebLocatorMethods.getTextByCSS(webdriver, "contactsheader.css", 1000);
+				  String returntocontactsheader = WebLocatorMethods.getTextByCSS(webdriver, "contactsheader.css", 180);
 				  Assert.assertEquals(returntocontactsheader,"Contacts");
 				  
-				  String nocontactsdefinedtext = WebLocatorMethods.getTextByClassName(webdriver, "nocontactsdefinedtext.class", 1000);
+				  String nocontactsdefinedtext = WebLocatorMethods.getTextByClassName(webdriver, "nocontactsdefinedtext.class", 180);
 				  Assert.assertEquals(nocontactsdefinedtext, "No contacts defined.");
 				  
 			  }

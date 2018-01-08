@@ -30,7 +30,7 @@ public class Methods4Login {
 			    WebLocatorMethods.clickById(webdriver, "webloginpassword.id", 30); 
 			    WebLocatorMethods.sendKeysIntoElementById(webdriver, "webloginpassword.id", loginpwd, 30);
 			    WebLocatorMethods.clickById(webdriver, "webloginbtn.id", 30);
-			    WebLocatorMethods.waitXSecsAndGetVisibleElementByXpath(webdriver, "webterms.xpath", 1000);
+			    WebLocatorMethods.waitXSecsAndGetVisibleElementByXpath(webdriver, "webterms.xpath", 300);
 			        
 			        try
 			        {

@@ -539,7 +539,8 @@ public class WebLocatorMethods{
 		builder.sendKeys(keys);
 		builder.build().perform();		
 	}
-    
+
+	
 	public static void actionsMoveToElementAndPageDownByID (WebDriver webdriver, String locatorID, int seconds)
 	{
 		ReadProperties.retrieveProperty();

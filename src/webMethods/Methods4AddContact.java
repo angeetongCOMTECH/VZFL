@@ -24,7 +24,7 @@ public class Methods4AddContact {
 	
 	public static void addContacts (WebDriver webdriver, String foldername, String errorname, String error, String contactname, String phone, String email) throws InterruptedException, IOException
 	{
-		WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "contactslink.css", 1000);
+		WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "contactslink.css", 180);
 		String contactsheadertext = WebLocatorMethods.getTextByCSS(webdriver, "contactsheader.css", 60);		
 		Assert.assertEquals(contactsheadertext, "Contacts");
 		
@@ -44,9 +44,9 @@ public class Methods4AddContact {
 			softAssert.fail();
 		}
 	
-        Boolean deletecontactsbtnexists = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "contactsdeletebutton.class", 300);	  
+        Boolean deletecontactsbtnexists = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "contactsdeletebutton.class", 180);	  
 		
-		Boolean nocontactexist = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "nocontactsdefinedtext.class", 300);
+		Boolean nocontactexist = WebLocatorMethods.existsSizeNotZeroByClass(webdriver, "nocontactsdefinedtext.class", 180);
 		if (nocontactexist == true)
 		{
 			//If no contacts exist exit if/else statement and go add a contact.

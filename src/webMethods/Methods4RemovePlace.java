@@ -27,25 +27,24 @@ public class Methods4RemovePlace {
 			try
 			{
 			    log.info("Methods4RemovePlace starting");		
-				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webplacesicon.css", 1000);
+				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webplacesicon.css", 180);
 				
 				Thread.sleep(2000);
-				Boolean emptyplacesexists = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyplaces.css", 1000);
+				Boolean emptyplacesexists = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyplaces.css", 180);
 				
-				if (emptyplacesexists == false)
+				if (emptyplacesexists == true)
+				{
+					log.info("There is an empty places list so there are no places to delete.");
+				}
+				else if (emptyplacesexists == false)
 				{
 				
 				//To avoid org.openqa.selenium.StaleElementReferenceException error by storing locators to the elements instead of references
-				List <WebElement> placeelements = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webplaceslistarray.css", 4000);
+				List <WebElement> placeelements = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webplaceslistarray.css", 180);
 				int placeslistsize = placeelements.size();
 				System.out.println("placeslistsize: "+placeslistsize);
-				
-				if (placeslistsize == 0)
-				{
-					log.info("There are 0 places so nothing to delete.");
-				}
-				else
-				{
+
+
 					log.info("There are "+placeslistsize+" places.");
 
 						for (int i=0; i<placeslistsize; i++)
@@ -100,7 +99,7 @@ public class Methods4RemovePlace {
 							    WebLocatorMethods.actionsClickByCSS(webdriver, "webdeleteplaceselectall.css", 30);
 							    Thread.sleep(1000);
 							    
-							    List <WebElement> deleteplacesarray = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webdeleteplacearray.css", 2000);
+							    List <WebElement> deleteplacesarray = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webdeleteplacearray.css", 180);
 					    	    
 							    int deleteplacearraysize = deleteplacesarray.size();
 							    log.info("There are "+deleteplacearraysize+" alerts for deleting.");
@@ -115,8 +114,8 @@ public class Methods4RemovePlace {
 							    	    else
 							    	    {
 							    	    	    log.info("Found place to delete. " + deleteplacetext);
-							    	    	    WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webdeleteplaceiconarray.css", 2000).get(j);
-							    	    	    WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webdeleteplacecheckboxarray.css", 2000).get(j).click();
+							    	    	    WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webdeleteplaceiconarray.css", 180).get(j);
+							    	    	    WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webdeleteplacecheckboxarray.css", 180).get(j).click();
 							    	    	    WebLocatorMethods.waitXSecsAndGetVisibleElementByCSS(webdriver, "webdeleteplacecheckedcheckbox.css", 30);
 									    log.info("Checkoff place to delete.");
 									    
@@ -129,56 +128,52 @@ public class Methods4RemovePlace {
 									    WebLocatorMethods.clickByCssSelector(webdriver, "webdeleteplaceremovebtn.css", 120);
 									    log.info("Clicked delete button.");
 									    
-								Thread.sleep(2000);
-								Boolean emptyplacesexists2 = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyplaces.css", 1000);
-										
-								if (emptyplacesexists2 == false)
-								{
+										Thread.sleep(2000);
+										Boolean emptyplacesexists2 = WebLocatorMethods.existsSizeNotZeroByCSS(webdriver, "webemptyplaces.css", 180);
+												
+										if (emptyplacesexists2 == false)
+										{
+											    
+											    List <WebElement> afterdeleteplacearray = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webplaceslistarray.css", 180);
+											    int afterdeleteplacesize = afterdeleteplacearray.size();
+											    
+											    for (int k=0; k<afterdeleteplacesize; k++)
+											    {
+											    	    String afterdeleteplacenametext = afterdeleteplacearray.get(k).getText();
+											    	    if (afterdeleteplacenametext.contains(placename))
+											    	    {
+											    	    	   log.info("Checking through the list that this is not the deleted place.");
+											    	    }
+											    	    else if (afterdeleteplacenametext.contains(placename))
+											    	    {
+											    	    	   log.info("Place was deleted, but has not been removed from places list.");
+											    	    }
+											    }
+											    
+											    log.info("Place has been deleted.");
+											    javascript.executeScript("window.scrollBy(0,-800)", "");
+										        
+											    break;
+										}
+										else 
+										{
+										    log.info("Place has been deleted.");
+										    break;
+										}
 									    
-									    List <WebElement> afterdeleteplacearray = WebLocatorMethods.arrayofelementsbyCSS(webdriver, "webplaceslistarray.css", 4000);
-									    int afterdeleteplacesize = afterdeleteplacearray.size();
+							    	    }//else if
 									    
-									    for (int k=0; k<afterdeleteplacesize; k++)
-									    {
-									    	    String afterdeleteplacenametext = afterdeleteplacearray.get(k).getText();
-									    	    if (afterdeleteplacenametext.contains(placename))
-									    	    {
-									    	    	   log.info("Checking through the list that this is not the deleted place.");
-									    	    }
-									    	    else if (afterdeleteplacenametext.contains(placename))
-									    	    {
-									    	    	   log.info("Place was deleted, but has not been removed from places list.");
-									    	    }
-									    }
-									    
-									    log.info("Place has been deleted.");
-									    javascript.executeScript("window.scrollBy(0,-800)", "");
-								        
-									    break;
-								}
-								else 
-								{
-								    log.info("Place has been deleted.");
-								    break;
-								}
-									    
-							    	    }
-									    
-							    }
+							    } //for loop
 
 							    break;
-						    }
+						    } //else if
 						    
 						    
-						 }
+						 } //for loop
 							    
-				        
-				}
-				}
-				else
-				{
-					log.info("There is an empty places list so there are no places to delete.");
-				}
+				
+			  } //first else if
+
 
 			}
 			catch(Exception e)

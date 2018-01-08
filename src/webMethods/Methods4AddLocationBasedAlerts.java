@@ -27,16 +27,16 @@ public class Methods4AddLocationBasedAlerts {
 			try
 			{
 			
-				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webalertsicon.class", 1000);
+				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webalertsicon.class", 180);
 
-				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webaddanalerticon.class", 1000);
+				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webaddanalerticon.class", 180);
 
 				
 				log.info("Check select alert page.");
 				
 				try
 				{
-					String alerttypeheader = WebLocatorMethods.getTextByCSS(webdriver, "webselectalerttypeheader.css", 1000);
+					String alerttypeheader = WebLocatorMethods.getTextByCSS(webdriver, "webselectalerttypeheader.css", 180);
 					Assert.assertEquals(alerttypeheader, "Select alert type");
 					
 					String lbalertheader = WebLocatorMethods.getTextByCSS(webdriver, "webselectalerttypelbalertheader.css", 30);
@@ -65,7 +65,7 @@ public class Methods4AddLocationBasedAlerts {
 				WebLocatorMethods.clickByCssSelector(webdriver, "webselectalerttypelbalertheader.css", 30);
 				//Needed longer wait before and after click or get stuck loading the add place page when clicked
 
-				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webselectalertlocationaddaplace.css", 4000);
+				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webselectalertlocationaddaplace.css", 180);
 				Thread.sleep(4000);
 				
 
@@ -73,11 +73,11 @@ public class Methods4AddLocationBasedAlerts {
 			    Thread.sleep(1000);
 			    
 				//After adding a place from alerts then reclick on alerts to create a location based alert.
-				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webalertsicon.class", 1000);
+				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webalertsicon.class", 180);
 
-				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webaddanalerticon.class", 1000);
+				WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webaddanalerticon.class", 180);
 
-				WebLocatorMethods.clickByCssSelector(webdriver, "webselectalerttypelbalertheader.css", 1000);
+				WebLocatorMethods.clickByCssSelector(webdriver, "webselectalerttypelbalertheader.css", 180);
 				Thread.sleep(1000);
 			
 		        JavascriptExecutor javascript = (JavascriptExecutor) webdriver;
@@ -92,7 +92,7 @@ public class Methods4AddLocationBasedAlerts {
 		        
 				try
 				{
-					String customizealertboundaryheader = WebLocatorMethods.getTextByCSS(webdriver, "webcustomizealertboundaryheader.css", 1000);
+					String customizealertboundaryheader = WebLocatorMethods.getTextByCSS(webdriver, "webcustomizealertboundaryheader.css", 180);
 					Assert.assertEquals(customizealertboundaryheader, "Customize alert boundary");
 					
 					String customizealertboundaryplaceheader = WebLocatorMethods.getTextByCSS(webdriver, "webalertboundaryplaceheader.css", 30);
@@ -136,9 +136,9 @@ public class Methods4AddLocationBasedAlerts {
 				
 				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertboundary1m.css", 30);
 
-				WebLocatorMethods.clickByCssSelector(webdriver, "webalertboundarynextbtn.css", 500);
+				WebLocatorMethods.clickByCssSelector(webdriver, "webalertboundarynextbtn.css", 180);
 				
-				String selectfamilymembersheader = WebLocatorMethods.getTextByCSS(webdriver, "webalertselectfamilymembersheader.css", 1000);
+				String selectfamilymembersheader = WebLocatorMethods.getTextByCSS(webdriver, "webalertselectfamilymembersheader.css", 180);
 				Assert.assertEquals(selectfamilymembersheader, "Select family members");
 				
 				
@@ -222,7 +222,7 @@ public class Methods4AddLocationBasedAlerts {
 				}
 				
 
-				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 2000);
+				WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 180);
 				
 				log.info("Check review add web alert page.");
 				
@@ -262,7 +262,7 @@ public class Methods4AddLocationBasedAlerts {
 					Assert.assertEquals(editfamilymemberstext, "Edit");
 					
 					//Thread.sleep(1000);
-					int member1avatarexists = WebLocatorMethods.sizeByCSS(webdriver, "webalertreviewfamilymember1avatar.css", 1000);
+					int member1avatarexists = WebLocatorMethods.sizeByCSS(webdriver, "webalertreviewfamilymember1avatar.css", 180);
 					Assert.assertEquals(member1avatarexists, 1);
 					System.out.println("member1avatarexists: "+member1avatarexists);
 					
@@ -441,16 +441,16 @@ public class Methods4AddLocationBasedAlerts {
 		try
 		{
 		
-			WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webalertsicon.class", 1000);
+			WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webalertsicon.class", 180);
 
-			WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webaddanalerticon.class", 1000);
+			WebLocatorMethods.javascriptExecutorClickByClass(webdriver, "webaddanalerticon.class", 180);
 
 			
 			log.info("Check select alert page.");
 			
 			try
 			{
-				String alerttypeheader = WebLocatorMethods.getTextByCSS(webdriver, "webselectalerttypeheader.css", 1000);
+				String alerttypeheader = WebLocatorMethods.getTextByCSS(webdriver, "webselectalerttypeheader.css", 180);
 				Assert.assertEquals(alerttypeheader, "Select alert type");
 				
 				String lbalertheader = WebLocatorMethods.getTextByCSS(webdriver, "webselectalerttypelbalertheader.css", 30);
@@ -477,9 +477,9 @@ public class Methods4AddLocationBasedAlerts {
 			
 			//Click location based alert and choose a place
 			WebLocatorMethods.clickByCssSelector(webdriver, "webselectalerttypelbalertheader.css", 30);
-			WebLocatorMethods.waitXSecsAndGetVisibleElementByCSS(webdriver, "webselectalertlocationaddaplace.css", 1000);			 
+			WebLocatorMethods.waitXSecsAndGetVisibleElementByCSS(webdriver, "webselectalertlocationaddaplace.css", 180);			 
 	        
-	        WebLocatorMethods.selectPlaceClickByXpath(webdriver, placename, "websavedaddedplacename.xpath", 1000);
+	        WebLocatorMethods.selectPlaceClickByXpath(webdriver, placename, "websavedaddedplacename.xpath", 180);
 	        
 
 			
@@ -487,7 +487,7 @@ public class Methods4AddLocationBasedAlerts {
 	        
 			try
 			{
-				String customizealertboundaryheader = WebLocatorMethods.getTextByCSS(webdriver, "webcustomizealertboundaryheader.css", 1000);
+				String customizealertboundaryheader = WebLocatorMethods.getTextByCSS(webdriver, "webcustomizealertboundaryheader.css", 180);
 				Assert.assertEquals(customizealertboundaryheader, "Customize alert boundary");
 				
 				String customizealertboundaryplaceheader = WebLocatorMethods.getTextByCSS(webdriver, "webalertboundaryplaceheader.css", 30);
@@ -530,9 +530,9 @@ public class Methods4AddLocationBasedAlerts {
 			
 			WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertboundary1m.css", 30);
 
-			WebLocatorMethods.clickByCssSelector(webdriver, "webalertboundarynextbtn.css", 500);
+			WebLocatorMethods.clickByCssSelector(webdriver, "webalertboundarynextbtn.css", 180);
 			
-			String selectfamilymembersheader = WebLocatorMethods.getTextByCSS(webdriver, "webalertselectfamilymembersheader.css", 1000);
+			String selectfamilymembersheader = WebLocatorMethods.getTextByCSS(webdriver, "webalertselectfamilymembersheader.css", 180);
 			Assert.assertEquals(selectfamilymembersheader, "Select family members");
 			
 			log.info("Check family member pic, name, and checkbox exists.");
@@ -596,7 +596,7 @@ public class Methods4AddLocationBasedAlerts {
 				try
 				{
 					
-					String nextbtntext = WebLocatorMethods.getTextByCSS(webdriver, "webalertselectfamilynextbtn.css", 300);
+					String nextbtntext = WebLocatorMethods.getTextByCSS(webdriver, "webalertselectfamilynextbtn.css", 180);
 					Assert.assertEquals(nextbtntext, "Next");
 				}
 				catch(AssertionError e)
@@ -614,7 +614,7 @@ public class Methods4AddLocationBasedAlerts {
 				log.error("Failed Assertion. Check all checkboxes, but no next button.");
 			}
 			
-			WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 2000);
+			WebLocatorMethods.javascriptExecutorClickByCSSSelector(webdriver, "webalertselectfamilynextbtn.css", 180);
 			
 			log.info("Check review add web alert page.");
 			
