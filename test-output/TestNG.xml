@@ -7,12 +7,14 @@
        <class name="webTests.AddaPlace" />
 	   <class name="webTests.AddContacts" />
 	   <class name="webTests.AddLocationBasedAlert" />
+	   <class name="webTests.AddScheduledAlert" />
     </classes>
   </test>
   
   <test name="Remove Tests">
     <classes>
       <class name="webTests.DeleteLocationBasedAlert" />
+      <class name="webTests.DeleteScheduledAlert" />
       <class name="webTests.DeleteContacts" />
     </classes>
   </test>

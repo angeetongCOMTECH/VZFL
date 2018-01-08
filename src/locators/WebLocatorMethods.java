@@ -468,6 +468,84 @@ public class WebLocatorMethods{
     }
     
     
+    
+	public static void actionsClickClearandSendByID (WebDriver webdriver, String locatorID, String keys, int seconds)
+	{
+		ReadProperties.retrieveProperty();
+        String locid = ReadProperties.webLocatorProp.getProperty(locatorID);
+		WebDriverWait wait = new WebDriverWait(webdriver, seconds);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locid)));
+        WebElement element = webdriver.findElement(By.id(locid));
+		Actions builder = new Actions(webdriver);
+		builder.moveToElement(element);
+		builder.click();
+		builder.sendKeys(Keys.CLEAR);
+		builder.sendKeys(keys);
+		builder.build().perform();		
+	}
+	
+
+	
+	public static void actionsClickClearandSendByClass (WebDriver webdriver, String locatorClass, String keys, int seconds)
+	{
+		ReadProperties.retrieveProperty();
+        String locclass = ReadProperties.webLocatorProp.getProperty(locatorClass);
+		WebDriverWait wait = new WebDriverWait(webdriver, seconds);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.className(locclass)));
+        WebElement element = webdriver.findElement(By.className(locclass));
+		Actions builder = new Actions(webdriver);
+		builder.moveToElement(element);
+		builder.click();
+		builder.sendKeys(Keys.CLEAR);
+		builder.sendKeys(keys);
+		builder.build().perform();		
+	}
+	
+	public static void actionsClickClearandSendByName (WebDriver webdriver, String locatorName, String keys, int seconds)
+	{
+		ReadProperties.retrieveProperty();
+        String locname = ReadProperties.webLocatorProp.getProperty(locatorName);
+		WebDriverWait wait = new WebDriverWait(webdriver, seconds);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.name(locname)));
+        WebElement element = webdriver.findElement(By.name(locname));
+		Actions builder = new Actions(webdriver);
+		builder.moveToElement(element);
+		builder.click();
+		builder.sendKeys(Keys.CLEAR);
+		builder.sendKeys(keys);
+		builder.build().perform();		
+	}
+	
+	public static void actionsClickClearandSendByCSS (WebDriver webdriver, String locatorCSS, String keys, int seconds)
+	{
+		ReadProperties.retrieveProperty();
+        String loccss = ReadProperties.webLocatorProp.getProperty(locatorCSS);
+		WebDriverWait wait = new WebDriverWait(webdriver, seconds);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(loccss)));
+        WebElement element = webdriver.findElement(By.cssSelector(loccss));
+		Actions builder = new Actions(webdriver);
+		builder.moveToElement(element);
+		builder.click();
+		builder.sendKeys(Keys.CLEAR);
+		builder.sendKeys(keys);
+		builder.build().perform();		
+	}
+	
+	public static void actionsClickClearandSendByXpath (WebDriver webdriver, String locatorXpath, String keys, int seconds)
+	{
+		ReadProperties.retrieveProperty();
+        String locxpath = ReadProperties.webLocatorProp.getProperty(locatorXpath);
+		WebDriverWait wait = new WebDriverWait(webdriver, seconds);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locxpath)));
+        WebElement element = webdriver.findElement(By.xpath(locxpath));
+		Actions builder = new Actions(webdriver);
+		builder.moveToElement(element);
+		builder.click();
+		builder.sendKeys(Keys.CLEAR);
+		builder.sendKeys(keys);
+		builder.build().perform();		
+	}
+    
 	public static void actionsClickandSendByID (WebDriver webdriver, String locatorID, String keys, int seconds)
 	{
 		ReadProperties.retrieveProperty();
@@ -716,6 +794,8 @@ public class WebLocatorMethods{
 		builder.click();
 		builder.build().perform();		
 	}
+	
+	
 	
 	public static WebElement javascriptExecutorScrollIntoViewByID (WebDriver webdriver, String locatorID, int seconds)
 	{

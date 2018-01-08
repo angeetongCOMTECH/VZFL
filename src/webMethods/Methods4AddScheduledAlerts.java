@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import common.DateTimeMethods;
 import common.ScreenshotURL;
+import locators.ReadProperties;
 import locators.WebLocatorMethods;
 
 public class Methods4AddScheduledAlerts {
@@ -76,14 +77,27 @@ public class Methods4AddScheduledAlerts {
 					String selecttimetext = WebLocatorMethods.getTextByCSS(webdriver,"websetschedulealertselecttimeheader.css", 30);
 					Assert.assertEquals(selecttimetext, "Select time");
 					
-					//The time input field for scheduled alert is not clickable nor does actions work, so had to sendKeys this way.
-			        
 					schedalerttime = DateTimeMethods.addXminToCurrentTimeInSpecificTimezone(webdriver, timezoneid, setalertxminsintofuture);
-					
 					WebElement timeinput = WebLocatorMethods.waituntilXsecondsisDisplayedByCSS(webdriver, "websetschedulealerttimeinput.css", 180);
-					timeinput.sendKeys(Keys.DELETE);
-					timeinput.sendKeys(schedalerttime);
-
+					
+					if(ReadProperties.globalProp.getProperty("webbrowser").contains("chrome"))
+					{
+						timeinput.sendKeys(Keys.DELETE);
+						timeinput.sendKeys(schedalerttime);
+					}
+					else if(ReadProperties.globalProp.getProperty("webbrowser").contains("firefox"))
+					{
+						String [] timearray = schedalerttime.split(":");
+						String hours = timearray[0];
+						String minutesampm = timearray[1];
+					
+						//Firefox has to enter minutes ampm first then hours
+						String firefoxalertime = minutesampm+hours;
+						
+						WebLocatorMethods.actionsClickClearandSendByCSS(webdriver, "websetschedulealerttimeinput.css", firefoxalertime, 30);
+					}
+					
+					
 					WebLocatorMethods.clickByClassName(webdriver, "websetschedulealertclicktorefresh.class", 30);
 					
 					String repeatonthesedaystext = WebLocatorMethods.getTextByXpath(webdriver, "websetschedulealertrepeatonthesedaysheader.xpath", 60);
